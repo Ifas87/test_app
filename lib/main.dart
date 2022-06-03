@@ -73,7 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: const Text('Arduino Mobile Compiler'),
+        backgroundColor: Colors.greenAccent[400],
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -93,23 +94,100 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
+
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            Flexible(
+              flex: 1,
+              child:
+                  // File inputs
+                  Row(children: <Widget>[
+                Flexible(
+                    flex: 1,
+                    child: Text(
+                      "Filename: ",
+                      style: new TextStyle(
+                          fontFamily: 'Montserrat-Bold', fontSize: 25),
+                    )),
+                Flexible(
+                  flex: 1,
+                  child: TextField(
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Enter a valid filename"),
+                  ),
+                ),
+              ]),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+
+            Flexible(
+              flex: 1,
+              child:
+                  // Control elements
+                  Row(
+                children: <Widget>[
+                  Text(
+                    "Hello 2",
+                    style: new TextStyle(
+                        fontFamily: 'Montserrat-Bold',
+                        fontSize:
+                            25), //style: TextStyle(fontFamily: 'Montserrat-Bold', fontSize: 25),
+                  ),
+                ],
+              ),
             ),
+
+            Flexible(
+              flex: 4,
+              child:
+                  // Source code section
+                  Column(
+                children: <Widget>[
+                  Text(
+                    "Hello 3",
+                    style: new TextStyle(
+                        fontFamily: 'Montserrat-Bold',
+                        fontSize:
+                            25), //style: TextStyle(fontFamily: 'Montserrat-Bold', fontSize: 25),
+                  ),
+                ],
+              ),
+            ),
+
+            Flexible(
+              flex: 4,
+              child:
+                  // Results section
+                  Column(
+                children: <Widget>[
+                  Text(
+                    "Hello 4",
+                    style: new TextStyle(
+                        fontFamily: 'Montserrat-Bold',
+                        fontSize:
+                            25), //style: TextStyle(fontFamily: 'Montserrat-Bold', fontSize: 25),
+                  ),
+                ],
+              ),
+            )
+
+            // const Text(
+            //   'You have pushed the button this many times:',
+            // ),
+            // Text(
+            //   '$_counter',
+            //   style: Theme.of(context).textTheme.headline4,
+            // ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+
+      // LATER
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
