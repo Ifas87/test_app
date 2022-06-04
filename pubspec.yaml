@@ -29,7 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  google_fonts: ^1.1.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -51,6 +51,15 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  fonts:
+    - family: Montserrat
+      fonts:
+      - asset: assets/fonts/Montserrat-Medium.ttf
+        weight: 500
+    - family: Montserrat-Bold
+      fonts:
+      - asset: assets/fonts/Montserrat-SemiBold.ttf
+        weight: 500
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -73,13 +82,9 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-fonts:
-- family: Montserrat
-  fonts:
-    - asset: assets\fonts\Montserrat-Medium.ttf
-- family: Montserrat-Bold
-  fonts:
-    - asset: assets\fonts\Montserrat-Semibold.ttf
+#- family: DancingScript     
+ # fonts:
+  #  - asset: assets/dancing_script.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

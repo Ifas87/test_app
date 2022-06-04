@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     flex: 1,
                     child: Text(
                       "Filename: ",
-                      style: new TextStyle(
+                      style: TextStyle(
                           fontFamily: 'Montserrat-Bold', fontSize: 25),
                     )),
                 Flexible(
@@ -126,12 +126,27 @@ class _MyHomePageState extends State<MyHomePage> {
                   // Control elements
                   Row(
                 children: <Widget>[
-                  Text(
-                    "Hello 2",
-                    style: new TextStyle(
-                        fontFamily: 'Montserrat-Bold',
-                        fontSize:
-                            25), //style: TextStyle(fontFamily: 'Montserrat-Bold', fontSize: 25),
+                  Flexible(
+                    child: FlatButton(
+                      child: Text(
+                        'New File',
+                        style: TextStyle(fontSize: 18.0),
+                      ),
+                      color: Colors.blueAccent,
+                      textColor: Colors.white,
+                      onPressed: () {},
+                    ),
+                  ),
+                  Flexible(
+                    child: FlatButton(
+                      child: Text(
+                        'Save program',
+                        style: TextStyle(fontSize: 18.0),
+                      ),
+                      color: Colors.blueAccent,
+                      textColor: Colors.white,
+                      onPressed: () {},
+                    ),
                   ),
                 ],
               ),
