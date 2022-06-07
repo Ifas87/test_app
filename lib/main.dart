@@ -97,94 +97,121 @@ class _MyHomePageState extends State<MyHomePage> {
           // mainAxisAlignment: MainAxisAlignment.center,
 
           children: <Widget>[
-            Flexible(
-              flex: 1,
-              child:
-                  // File inputs
-                  Row(children: <Widget>[
-                Flexible(
+            Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Flexible(
+                flex: 1,
+                child:
+                    // File inputs
+                    Row(children: <Widget>[
+                  Flexible(
+                      flex: 1,
+                      child: Text(
+                        "Filename: ",
+                        style: TextStyle(
+                            fontFamily: 'Montserrat-Bold', fontSize: 25),
+                      )),
+                  Flexible(
                     flex: 1,
-                    child: Text(
-                      "Filename: ",
-                      style: TextStyle(
-                          fontFamily: 'Montserrat-Bold', fontSize: 25),
-                    )),
-                Flexible(
-                  flex: 1,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Enter a valid filename"),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          enabledBorder: const OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: Colors.black, width: 4.0),
+                          ),
+                          border: InputBorder.none,
+                          hintText: "Enter a valid filename"),
+                    ),
+                  ),
+                ]),
+              ),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Flexible(
+                flex: 1,
+                child:
+                    // Control elements
+                    Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(
+                        10.0,
+                      ),
+                      child: Flexible(
+                        child: FlatButton(
+                          child: Text(
+                            'Save File',
+                            style: TextStyle(
+                                fontFamily: 'Montserrat-Bold', fontSize: 18.0),
+                          ),
+                          color: Colors.blueAccent,
+                          textColor: Colors.white,
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Flexible(
+                        child: FlatButton(
+                          child: Text(
+                            'Run Code',
+                            style: TextStyle(
+                                fontFamily: 'Montserrat-Bold', fontSize: 18.0),
+                          ),
+                          color: Colors.blueAccent,
+                          textColor: Colors.white,
+                          onPressed: () {},
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Flexible(
+                flex: 4,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        "Hello 3",
+                        style: new TextStyle(
+                            fontFamily: 'Montserrat-Bold',
+                            fontSize:
+                                25), //style: TextStyle(fontFamily: 'Montserrat-Bold', fontSize: 25),
+                      ),
+                    ],
                   ),
                 ),
-              ]),
+                // Source code section
+              ),
             ),
 
-            Flexible(
-              flex: 1,
-              child:
-                  // Control elements
-                  Row(
-                children: <Widget>[
-                  Flexible(
-                    child: FlatButton(
-                      child: Text(
-                        'New File',
-                        style: TextStyle(fontSize: 18.0),
+            Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Flexible(
+                  flex: 4,
+                  child:
+                      // Results section
+                      Column(
+                    children: <Widget>[
+                      Text(
+                        "Hello 4",
+                        style: new TextStyle(
+                            fontFamily: 'Montserrat-Bold',
+                            fontSize:
+                                25), //style: TextStyle(fontFamily: 'Montserrat-Bold', fontSize: 25),
                       ),
-                      color: Colors.blueAccent,
-                      textColor: Colors.white,
-                      onPressed: () {},
-                    ),
+                    ],
                   ),
-                  Flexible(
-                    child: FlatButton(
-                      child: Text(
-                        'Save program',
-                        style: TextStyle(fontSize: 18.0),
-                      ),
-                      color: Colors.blueAccent,
-                      textColor: Colors.white,
-                      onPressed: () {},
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Flexible(
-              flex: 4,
-              child:
-                  // Source code section
-                  Column(
-                children: <Widget>[
-                  Text(
-                    "Hello 3",
-                    style: new TextStyle(
-                        fontFamily: 'Montserrat-Bold',
-                        fontSize:
-                            25), //style: TextStyle(fontFamily: 'Montserrat-Bold', fontSize: 25),
-                  ),
-                ],
-              ),
-            ),
-
-            Flexible(
-              flex: 4,
-              child:
-                  // Results section
-                  Column(
-                children: <Widget>[
-                  Text(
-                    "Hello 4",
-                    style: new TextStyle(
-                        fontFamily: 'Montserrat-Bold',
-                        fontSize:
-                            25), //style: TextStyle(fontFamily: 'Montserrat-Bold', fontSize: 25),
-                  ),
-                ],
-              ),
-            )
+                )),
 
             // const Text(
             //   'You have pushed the button this many times:',
