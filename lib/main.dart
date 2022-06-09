@@ -187,6 +187,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             fontSize:
                                 25), //style: TextStyle(fontFamily: 'Montserrat-Bold', fontSize: 25),
                       ),
+                      TextField(
+                        maxLines: 150,
+                        decoration: InputDecoration(
+                            enabledBorder: const OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: Colors.black, width: 4.0),
+                            ),
+                            border: InputBorder.none,
+                            hintText: "Enter a valid filename"),
+                      )
                     ],
                   ),
                 ),
@@ -198,19 +208,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: EdgeInsets.all(10.0),
                 child: Flexible(
                   flex: 4,
-                  child:
-                      // Results section
-                      Column(
+                  child: SingleChildScrollView(
+                      child: Column(
                     children: <Widget>[
                       Text(
-                        "Hello 4",
+                        "",
                         style: new TextStyle(
                             fontFamily: 'Montserrat-Bold',
                             fontSize:
                                 25), //style: TextStyle(fontFamily: 'Montserrat-Bold', fontSize: 25),
                       ),
                     ],
-                  ),
+                  )),
+                  // Results section
                 )),
 
             // const Text(
